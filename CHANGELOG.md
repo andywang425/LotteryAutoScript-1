@@ -1,5 +1,92 @@
 <!-- markdownlint-disable MD036 MD024-->
 # CHANGELOG
+## 主要变化(2.9.4)
+* 2f5990f fix: 动态ID字符串长度超过18
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.9.3)
+* 1d4e8ea fix: 专栏获取为空 (#425)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.9.2)
+* 4134190 fix: 分区移动失败继续运行 (#423)
+* 66fa06f fix: 源动态禁止转发
+* b1de122 fix: 验证码识别失败无限重试
+* d3475a5 feat(notify.js): QYWX推送变为图文消息 (#416)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.9.1)
+* 9b0f9bf fix: 仅屏蔽自动回复 (#401)
+* 74337ca fix: 账号转发动态途中被系统强制登出，任务直接终止 (#392)
+* 6c75d57 lint: eslint
+* e723136 feat:  可自定义验证码识别API
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.9.0)
+* 1e7d8b2 feat: 动态详情新老api共存
+* fc41750 fix: 源rid_str获取
+* 1a08c0a fix: 话题uid动态获取使用老解析函数
+* 666c057 feat: 使用新接口替换动态详情老接口 (#382)
+* df3e97d ci: fix "an artifact with this name already exists on the workflow run"
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.19)
+* d9f6bf2 feat: 中奖检测屏蔽自动回复 (#381)
+* ded981e fix: 动态卡片解析出错导致程序停止
+* 93d3727 fix: searcher.js typo fix (#379)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.17)
+* 60e211e fix: 读取uid出错 (#369)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.17)
+* 5b33ae3 fix: 读取uid出错 (#369)
+* 7e4650c feat: env可自定义UA (#371)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.16)
+* 469a6dc fix: add getOneDynamicByDyid v1
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.15)
+* 7b6356a fix:  风控导致动态全为过时
+* d337fb2 fix: 查询动态详情的接口失效 (#349)
+* d9dba6f fix: Cannot read properties of null (reading 'is_liked')
+* eafa7c7 fix:  Cannot read properties of null (reading 'length') (#360)
+* e2976cc docs: 文档更新cookie获取方式 (#357)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.14)
+* f5bdd28 fix: update api getOneDynamicByDyid
+* cb6fad0 fix: get_dynamic_detail api  (#351)
+* 780a3a9 fix: update get_dynamic_detail api (#350)
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.13)
+* addb9c6 fix: ghproxy.com->mirror.ghproxy.com (#333)
+* b86e756 fix: at错位
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
+## 主要变化(2.8.12)
+* 5d30178 ci: docker构建
+* 0c61070 fix: 评论并转发 (#259)
+* 6dfee7e fix: 出现帐号未登录错误时自动跳转下一个帐号
+
+_如果之前版本小于上一版本,请查看[CHANGELOG](https://github.com/shanmiteko/LotteryAutoScript/blob/main/CHANGELOG.md)变更说明_
+
 ## 主要变化(2.8.11)
 * 6496a8f fix: fs.close
 
