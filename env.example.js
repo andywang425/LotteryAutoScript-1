@@ -5,8 +5,10 @@ module.exports = Object.freeze({
      * - `NOTE` 帐号备注
      * - `NUMBER` 表示是第几个账号
      * - `CLEAR` 是否启用清理功能
+     * - `ACCOUNT_UA` 账号UA, 可在浏览器控制台输入 navigator.userAgent 查看
      * ## 高级功能
      * - `ENABLE_CHAT_CAPTCHA_OCR` 开启评论验证码识别 使用方法见README
+     * - `CHAT_CAPTCHA_OCR_URL` 验证码识别接口 POST `url`->`code`
      * - `ENABLE_MULTIPLE_ACCOUNT` 是否启用多账号
      * - `MULTIPLE_ACCOUNT_PARM` 多账号参数(JSON格式) <不推荐使用
      * ## 调试相关
@@ -21,17 +23,19 @@ module.exports = Object.freeze({
      * **按顺序依次执行, 防止访问频繁封禁IP**
      */
     account_parm: {
-        COOKIE: "",
-        NOTE: "",
+        COOKIE: '',
+        NOTE: '',
         NUMBER: 1,
         CLEAR: true,
+        ACCOUNT_UA: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
 
-        ENABLE_CHAT_CAPTCHA_OCR: "",
+        ENABLE_CHAT_CAPTCHA_OCR: false,
+        CHAT_CAPTCHA_OCR_URL: 'http://127.0.0.1:9898/ocr/url/text',
         ENABLE_MULTIPLE_ACCOUNT: false,
 
-        MULTIPLE_ACCOUNT_PARM: "",
+        MULTIPLE_ACCOUNT_PARM: '',
         LOTTERY_LOG_LEVEL: 3,
-        NOT_GO_LOTTERY: ""
+        NOT_GO_LOTTERY: ''
     },
 
     /**
@@ -55,11 +59,16 @@ module.exports = Object.freeze({
      */
     multiple_account_parm: [
         {
-            COOKIE: "",
-            NOTE: "",
+            COOKIE: '',
+            NOTE: '',
             NUMBER: 1,
             CLEAR: true,
-            WAIT: 60 * 1000
+            WAIT: 60 * 1000,
+            ACCOUNT_UA: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+            PROXY_HOST:'',//代理ip
+            PROXY_PORT:'',//代理ip端口
+            PROXY_USER:'',//代理ip账号
+            PROXY_PASS:'',//代理ip密码
         }
     ],
 
@@ -67,33 +76,33 @@ module.exports = Object.freeze({
      * 推送相关参数
      */
     push_parm: {
-        SCKEY: "",
-        SENDKEY: "",
-        QQ_SKEY: "",
-        QQ_MODE: "",
-        BARK_PUSH: "",
-        BARK_SOUND: "",
-        PUSHDEER_URL: "",
-        PUSHDEER_PUSHKEY: "",
-        TG_BOT_TOKEN: "",
-        TG_USER_ID: "",
-        TG_PROXY_HOST: "",
-        TG_PROXY_PORT: "",
-        DD_BOT_TOKEN: "",
-        DD_BOT_SECRET: "",
-        QYWX_AM: "",
-        QYWX_KEY: "",
-        IGOT_PUSH_KEY: "",
-        PUSH_PLUS_TOKEN: "",
-        PUSH_PLUS_USER: "",
-        QMSG_KEY: "",
-        QMSG_QQ: "",
-        SMTP_HOST: "",
-        SMTP_PORT: "",
-        SMTP_USER: "",
-        SMTP_PASS: "",
-        SMTP_TO_USER: "",
-        GOTIFY_URL: "",
-        GOTIFY_APPKEY: ""
+        SCKEY: '',
+        SENDKEY: '',
+        QQ_SKEY: '',
+        QQ_MODE: '',
+        BARK_PUSH: '',
+        BARK_SOUND: '',
+        PUSHDEER_URL: '',
+        PUSHDEER_PUSHKEY: '',
+        TG_BOT_TOKEN: '',
+        TG_USER_ID: '',
+        TG_PROXY_HOST: '',
+        TG_PROXY_PORT: '',
+        DD_BOT_TOKEN: '',
+        DD_BOT_SECRET: '',
+        QYWX_AM: '',
+        QYWX_KEY: '',
+        IGOT_PUSH_KEY: '',
+        PUSH_PLUS_TOKEN: '',
+        PUSH_PLUS_USER: '',
+        QMSG_KEY: '',
+        QMSG_QQ: '',
+        SMTP_HOST: '',
+        SMTP_PORT: '',
+        SMTP_USER: '',
+        SMTP_PASS: '',
+        SMTP_TO_USER: '',
+        GOTIFY_URL: '',
+        GOTIFY_APPKEY: ''
     }
-})
+});
